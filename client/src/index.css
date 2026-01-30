@@ -50,17 +50,17 @@ button {
 /* Utilities */
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
 }
 
+/* Updated for Fresh/Light look */
 .glass-panel {
-  background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: white;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn {
@@ -68,38 +68,39 @@ button {
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.5rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-full);
+  /* More rounded buttons */
   font-weight: 600;
   transition: all var(--transition-fast);
   gap: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
 .btn-primary {
-  background: var(--gradient-primary);
+  background: var(--color-secondary);
+  /* Orange buttons for CTA */
   color: white;
-  box-shadow: var(--shadow-glow);
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  background: var(--color-secondary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
-  background: var(--color-surface);
-  color: var(--color-text-main);
-  border: 1px solid var(--color-border);
+  background: white;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .btn-secondary:hover {
-  background: var(--color-surface-hover);
+  background: var(--color-primary);
+  color: white;
 }
 
 .text-gradient {
-  background: var(--gradient-primary);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
 }
 
 .animate-fade-in {
@@ -128,7 +129,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-surface-hover);
+  background: #cbd5e1;
   border-radius: var(--radius-full);
 }
 
